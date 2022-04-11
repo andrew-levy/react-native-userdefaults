@@ -14,10 +14,7 @@
     "react-native-userdefaults",
     "ReactNativeUserDefaults"
   ],
-  "repository": "",
-  "bugs": {
-    "url": "/issues"
-  },
+  "repository": "https://github.com/andrew-levy/react-native-userdefaults",
   "author": "Andrew Levy",
   "license": "MIT",
   "homepage": "#readme",
