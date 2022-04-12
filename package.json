@@ -1,6 +1,6 @@
 {
-  "name": "react-native-userdefaults",
-  "version": "0.1.0",
+  "name": "@alevy97/react-native-userdefaults",
+  "version": "0.1.1",
   "description": "UserDefaults in React Native",
   "main": "build/ReactNativeUserDefaults.js",
   "types": "build/ReactNativeUserDefaults.d.ts",
@@ -17,7 +17,7 @@
   "repository": "https://github.com/andrew-levy/react-native-userdefaults",
   "author": "Andrew Levy",
   "license": "MIT",
-  "homepage": "#readme",
+  "homepage": "https://github.com/andrew-levy/react-native-userdefaults",
   "dependencies": {
     "expo-modules-core": "^0.6.5"
   },

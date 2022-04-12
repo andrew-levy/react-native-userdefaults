@@ -11,7 +11,7 @@ An interface to the user’s defaults database, where you store key-value pairs 
 1. Install the package
 
 ```console
-yarn add react-native-userdefaults
+yarn add @alevy97/react-native-userdefaults
 ```
 
 2. Install pods
