@@ -5,8 +5,8 @@ export default class UserDefaults {
     isStandard;
     static standard = new UserDefaults();
     constructor(suiteName) {
+        this.isStandard = suiteName === undefined;
         this.suiteName = suiteName || "";
-        this.isStandard = this.suiteName === undefined;
     }
     async get(forKey) {
         return await ReactNativeUserDefaults.get(forKey, this.suiteName, this.isStandard);

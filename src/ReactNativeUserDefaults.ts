@@ -9,8 +9,8 @@ export default class UserDefaults {
   static standard = new UserDefaults();
 
   constructor(suiteName?: string) {
+    this.isStandard = suiteName === undefined;
     this.suiteName = suiteName || "";
-    this.isStandard = this.suiteName === undefined;
   }
 
   async get(forKey: string) {

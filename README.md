@@ -1,6 +1,6 @@
 # UserDefaults
 
-An interface to the user’s defaults database, where you store key-value pairs persistently across launches of your app.
+An interface to the user’s defaults database, where you store key-value pairs persistently across launches of your app. Inspired by [UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults).
 
 - :white_check_mark: Built with [Expo's Module API](https:docs.expo.dev/modules/module-api/)
 - :white_check_mark: Written in TypeScript and Swift
@@ -24,7 +24,7 @@ npx pod-install
 
 ### Standard Defaults
 
-The most commonly used feature is the standard defaults system. You can access the standard defaults system using the static property `UserDefaults.standard` or by creating a new `UserDefaults` instance with no arguments.
+The most common use case for using `UserDefaults` is to store small chunks of data to the standard defaults system. You can access the standard defaults system using the static property `UserDefaults.standard` or by creating a new `UserDefaults` instance with no arguments.
 
 ```tsx
 UserDefaults.standard;
@@ -38,7 +38,7 @@ new UserDefaults();
 
 ### Defaults with Suite Name
 
-Sometimes when you want to share user defaults accross different apps contained in the same [App Group](https://developer.apple.com/documentation/xcode/configuring-app-groups?changes=_3), you'll need to provide a suite name to the constructor.
+UserDefaults can also be used to store data that can be shared across multiple apps belonging to the same [App Group](https://developer.apple.com/documentation/xcode/configuring-app-groups?changes=_3), also known as a suite. To achieve this, provide a suite name (app group identifier) when creating a `UserDefaults` instance.
 
 ```tsx
 new UserDefaults("group.com.example.app");
@@ -68,6 +68,7 @@ function App() {
         onPress={async () => {
           const darkMode = await standardDefaults.get("darkMode");
           const coolNumbers = await groupDefaults.get("coolNumbers");
+          console.log(darkMode, coolNumbers);
         }}
       />
     </View>
@@ -79,7 +80,7 @@ function App() {
 
 ```typescript
 interface UserDefaults {
-  /* Convenience standard defaults static property */
+  /* Standard user defaults object */
   standard: UserDefaults;
   /* Get the value for a given key */
   get(forKey: string): Promise<any>;
