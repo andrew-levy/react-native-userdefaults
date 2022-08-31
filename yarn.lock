@@ -3523,7 +3523,7 @@ expand-brackets@^2.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-expo-module-scripts@2.1.1:
+expo-module-scripts@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/expo-module-scripts/-/expo-module-scripts-2.1.1.tgz#ab448959be461a57845868c1b0610f3cdf918b0c"
   integrity sha512-qkGvk3yxrAciQuOx58r4s8Yeczb/AzCT9SBj7SHrxaqXaWG/Vu6Qk/J0JVJEJlPD3A95yIxs2swUmh76BOsjdA==
@@ -3544,7 +3544,7 @@ expo-module-scripts@2.1.1:
     ts-jest "~26.3.0"
     typescript "^4.3.5"
 
-expo-modules-core@0.11.4:
+expo-modules-core@^0.11.4:
   version "0.11.4"
   resolved "https://registry.yarnpkg.com/expo-modules-core/-/expo-modules-core-0.11.4.tgz#6b7a27bb212f3fbf7d6803f747f6491aa73a2a09"
   integrity sha512-8dEYICk7hUi1GPz5hWm8dBuZDGc+4Tm7zDhSIhKApo5jY/5vB4Bk+fjPo693iWn6pp3+XBHT8Ri8rJ3G7wH1vQ==
