@@ -24,7 +24,7 @@ npx pod-install
 
 ### Standard Defaults
 
-The most common use case for using `UserDefaults` is to store small chunks of data to the standard defaults system. You can access the standard defaults system using the static property `UserDefaults.standard` or by creating a new `UserDefaults` instance with no arguments.
+The most common use case for using `UserDefaults` is to store small chunks of data to the standard defaults system. You can access the standard defaults system using the static property `UserDefaults.standard` or by creating a new `UserDefaults` instance.
 
 ```tsx
 UserDefaults.standard;
@@ -48,9 +48,9 @@ new UserDefaults("group.com.example.app");
 
 ```tsx
 import { Button, View } from "react-native";
-import UserDefaults from "react-native-userdefaults";
+import UserDefaults from "@alevy97/react-native-userdefaults";
 
-const standardDefaults = UserDefaults.standard;
+const standardDefaults = UserDefaults.standard; // or new UserDefaults()
 const groupDefaults = new UserDefaults("group.com.example.app");
 
 function App() {
@@ -88,9 +88,9 @@ interface UserDefaults {
   set(forKey: string, value: any): Promise<void>;
   /* Remove a value for a given key */
   remove(forKey: string): Promise<void>;
-  /* Clear all user default values */
-  clear(): Promise<void>;
-  /* Returns a dictionary represenation of the user defaults */
-  dictionaryRepresentation(): Promise<{ [key: string]: any }>;
+  /* Removes all user default values */
+  removeAll(): Promise<void>;
+  /* Returns all user default values */
+  getAll(): Promise<{ [key: string]: any }>;
 }
 ```
