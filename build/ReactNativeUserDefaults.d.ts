@@ -6,6 +6,6 @@ export default class UserDefaults {
     get(forKey: string): Promise<any>;
     set(forKey: string, value: any): Promise<any>;
     remove(forKey: string): Promise<any>;
-    dictionaryRepresentation(): Promise<any>;
-    clear(): Promise<any>;
+    getAll(): Promise<any>;
+    removeAll(): Promise<any>;
 }

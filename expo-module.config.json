@@ -1,9 +1,6 @@
 {
-  "platforms": ["ios", "android", "web"],
+  "platforms": ["ios"],
   "ios": {
     "modulesClassNames": ["ReactNativeUserDefaultsModule"]
-  },
-  "android": {
-    "modulesClassNames": ["expo.modules.reactnativeuserdefaults.ReactNativeUserDefaultsModule"]
   }
 }
