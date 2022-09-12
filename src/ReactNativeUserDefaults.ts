@@ -13,7 +13,7 @@ export default class UserDefaults {
     this.suiteName = suiteName || "";
   }
 
-  async get(forKey) {
+  async get(forKey: string) {
     const result = await ReactNativeUserDefaults.get(
       forKey,
       this.suiteName,
@@ -21,7 +21,7 @@ export default class UserDefaults {
     );
     return result === null ? undefined : result;
   }
-  async set(forKey, value) {
+  async set(forKey: string, value: any) {
     if (value === undefined || value === null) {
       return await this.remove(forKey);
     }
@@ -66,7 +66,7 @@ export default class UserDefaults {
     }
   }
 
-  async remove(forKey) {
+  async remove(forKey: string) {
     return await ReactNativeUserDefaults.remove(
       forKey,
       this.suiteName,

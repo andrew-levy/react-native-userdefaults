@@ -1,5 +1,4 @@
 import ExpoModulesCore
-import CoreFoundation
 
 public class ReactNativeUserDefaultsModule: Module {
     
