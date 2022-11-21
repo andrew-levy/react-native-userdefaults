@@ -1,12 +1,12 @@
 {
   "name": "@alevy97/react-native-userdefaults",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "UserDefaults in React Native",
   "main": "build/ReactNativeUserDefaults.js",
   "types": "build/ReactNativeUserDefaults.d.ts",
   "scripts": {
-    "build": "tsc",
-    "lint": "eslint ."
+    "build": "expo-module build",
+    "lint": "expo-module lint"
   },
   "keywords": [
     "react-native",
@@ -18,13 +18,15 @@
   "author": "Andrew Levy",
   "license": "MIT",
   "homepage": "https://github.com/andrew-levy/react-native-userdefaults",
-  "dependencies": {
-    "expo-modules-core": "^0.11.5"
-  },
   "devDependencies": {
-    "expo-module-scripts": "^2.0.0"
+    "@types/react": "^18.0.25",
+    "@types/react-native": "^0.70.6",
+    "expo-module-scripts": "^3.0.3",
+    "expo-modules-core": "^1.0.3"
   },
   "peerDependencies": {
-    "expo": "*"
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
   }
 }
