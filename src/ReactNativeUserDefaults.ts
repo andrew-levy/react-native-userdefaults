@@ -1,6 +1,6 @@
-import { NativeModulesProxy } from "expo-modules-core";
+import { requireNativeModule } from "expo-modules-core";
 
-const { ReactNativeUserDefaults } = NativeModulesProxy;
+const ReactNativeUserDefaults = requireNativeModule("ReactNativeUserDefaults");
 
 export default class UserDefaults {
   private suiteName: string;
@@ -55,14 +55,13 @@ export default class UserDefaults {
             this.suiteName,
             this.isStandard
           );
-        } else {
-          return await ReactNativeUserDefaults.setObject(
-            forKey,
-            value,
-            this.suiteName,
-            this.isStandard
-          );
         }
+        return await ReactNativeUserDefaults.setObject(
+          forKey,
+          value,
+          this.suiteName,
+          this.isStandard
+        );
     }
   }
 

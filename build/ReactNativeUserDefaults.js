@@ -1,5 +1,5 @@
-import { NativeModulesProxy } from "expo-modules-core";
-const { ReactNativeUserDefaults } = NativeModulesProxy;
+import { requireNativeModule } from "expo-modules-core";
+const ReactNativeUserDefaults = requireNativeModule("ReactNativeUserDefaults");
 export default class UserDefaults {
     suiteName;
     isStandard;
@@ -27,9 +27,7 @@ export default class UserDefaults {
                 if (Array.isArray(value)) {
                     return await ReactNativeUserDefaults.setArray(forKey, value, this.suiteName, this.isStandard);
                 }
-                else {
-                    return await ReactNativeUserDefaults.setObject(forKey, value, this.suiteName, this.isStandard);
-                }
+                return await ReactNativeUserDefaults.setObject(forKey, value, this.suiteName, this.isStandard);
         }
     }
     async remove(forKey) {

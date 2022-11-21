@@ -2,7 +2,7 @@
 
 An interface to the user’s defaults database, where you store key-value pairs persistently across launches of your app. Inspired by [UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults).
 
-- :white_check_mark: Built with [Expo's Module API](https:docs.expo.dev/modules/module-api/)
+- :white_check_mark: Built with [Expo's Module API](https://docs.expo.dev/modules/module-api/)
 - :white_check_mark: Written in TypeScript and Swift
 - :apple: Currently iOS only
 
