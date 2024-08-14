@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":"AAAA,OAAO,YAAY,MAAM,2BAA2B,CAAC;AACrD,eAAe,YAAY,CAAC","sourcesContent":["import UserDefaults from \"./ReactNativeUserDefaults\";\nexport default UserDefaults;\n"]}

@@ -1,9 +1,9 @@
 {
   "name": "@alevy97/react-native-userdefaults",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "UserDefaults in React Native",
-  "main": "build/ReactNativeUserDefaults.js",
-  "types": "build/ReactNativeUserDefaults.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "build": "expo-module build",
     "lint": "expo-module lint"
